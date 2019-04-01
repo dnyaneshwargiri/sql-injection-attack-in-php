@@ -10,10 +10,10 @@ Output  =>
 
 Vulnearable query
 
-![alt text](http://url/to/1.png)
+![alt text](https://github.com/dnyaneshwargiri/sql-injection-attack-in-php/blob/master/1.png)
 
 
 
 Its result 
 
-![alt text](http://url/to/2.png)
+![alt text](https://github.com/dnyaneshwargiri/sql-injection-attack-in-php/blob/master/2.png)
