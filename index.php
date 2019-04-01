@@ -1,15 +1,14 @@
 <?php
-   include("config.php");
-   session_start();
+   include("config.php");	/*for db connection*/
+   session_start(); 		/*to store valid username into session instance*/
    $error="";
 
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']);
       $sql = "SELECT * FROM admin WHERE username = '$myusername' and password = '$mypassword'";
-      $sql= str_replace("\'","'",$sql);
-      //echo($sql);
-      $result = mysqli_query($db,$sql);
+      $sql= str_replace("\'","'",$sql);		/*to escape blanks and spaces from input*/
+      $result = mysqli_query($db,$sql);		
       $count = mysqli_num_rows($result);
       $username_find_flag=false;
       $password_correct_flag=false;
@@ -17,7 +16,7 @@
       while( $rows = mysqli_fetch_array($result,MYSQLI_ASSOC))
       {
 				  foreach($rows as $row)
-			  {		// echo("  	".$row." 	 ");
+			  {		
 					   $query_result[]=$row;
 					if(strcmp($row,$myusername))
 					  {
@@ -28,7 +27,7 @@
 					  $password_correct_flag=true;
 					  }
 			  }
-			//  echo("<br/>");
+			
 	  }
 
 
