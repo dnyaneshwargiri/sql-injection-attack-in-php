@@ -1,4 +1,4 @@
-Steps to implement  =></br></br></br>
+Steps to do  =></br></br></br>
 
 1] Import database from db.sql file.</br>
 2] Copy paste php files into htdocs or var/www/html folder i.e php interpreter's root folder.</br>
